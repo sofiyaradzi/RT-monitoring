@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+channels = "*"
+redis = "*"
+django-redis = "*"
+channels-redis = "*"
 
 [dev-packages]
 autopep8 = "*"
