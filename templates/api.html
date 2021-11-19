@@ -1,0 +1,45 @@
+{% extends "base2.html" %}
+{% load static %}
+
+
+{% block style %}
+
+{% endblock style %} 
+
+{% block title %}
+   Random Values from public API 
+{% endblock title %}
+
+{% block content %}
+
+	<div class="container">
+        <h1>  Random Values from public API </h1> <br> <br>
+            {{ response }} <br> 
+    </div>
+    <br>
+    {% comment %} {% for dictionary in response %}
+    {% for key, value in dictionary.items %}
+        {{ key }} : {{ value }}<br>
+    {% endfor %}
+    s
+    <br>
+    {% endfor %} {% endcomment %}
+
+
+    {% for x in response %}
+    <span hidden class="random-data">{{x}} </span> 
+    {% endfor %}
+
+    <div class="col-8 mx-auto mt-4">
+        <canvas id="chart" ></canvas>
+    </div>
+
+
+{% endblock content %}
+
+{% block script %}
+    <!-- Chartjs CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!-- Chart javascript file -->
+    <script src="{% static 'chart.js' %}"> </script>
+{% endblock script %}

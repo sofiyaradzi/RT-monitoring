@@ -9,6 +9,7 @@ channels = "*"
 redis = "*"
 django-redis = "*"
 channels-redis = "*"
+requests = "*"
 
 [dev-packages]
 autopep8 = "*"
